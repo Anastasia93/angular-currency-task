@@ -1,0 +1,16 @@
+<p>🔁 Конвертер валют 🔁</p>
+<p> Для отримання результату, будь ласка, введіть суму і валюту в кожному з полів:</p>
+<div class="currency-converter row row-cols-2">
+    <div class="form-group col">
+      <input type="number" [(ngModel)]="firstCurrencyAmount" (input)="convertFirstCurrency()" class="form-control">
+      <select [(ngModel)]="firstConvertedCurrency" (change)="onFirstCurrencyChange()" class="form-control">
+        <option *ngFor="let currency of currencies" [value]="currency">{{currency}}</option>
+      </select>
+    </div>
+    <div class="form-group col">
+      <input type="number" [(ngModel)]="secondCurrencyAmount" (input)="convertSecondCurrency()" class="form-control">
+      <select [(ngModel)]="secondConvertedCurrency" (change)="onSecondCurrencyChange()" class="form-control">
+        <option *ngFor="let currency of currencies" [value]="currency">{{currency}}</option>
+      </select>
+    </div>
+  </div>
