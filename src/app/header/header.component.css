@@ -1,0 +1,11 @@
+body {
+  background-color: aliceblue;
+}
+
+.header {
+    text-align: center;
+  }
+
+.col {
+  margin-top: 10px;
+}

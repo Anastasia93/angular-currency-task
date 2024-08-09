@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
+import { AppModule } from './app.module';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [HeaderComponent, CurrencyConverterComponent, AppModule]
 })
 export class AppComponent {
-  title = 'angular-currency-task';
+  title = 'currency-exchange';
 }
